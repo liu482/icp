@@ -1,47 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>喃娘 ICP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 其他头部信息 -->
 
-        <title>喃娘ICP</title>
-
-        <link rel="stylesheet" href="./404static/frontend/css/style.min.css" id="stylesheet">
-                <script type="text/javascript">var count = 30;var countdown = setInterval(function(){$("#counter span").text(count);if (count < 1) {clearInterval(countdown);window.location="index.html";}count--;}, 1000);</script>
-            </head>
-    <body class="bg-secondary">
-        <div class="container">
-    <div class="card shadow mt-7">
-        <img src="https://api.miaomc.cn/image/get" class="rounded w-100">
-        <div class="card-body">
-            <div class="d-flex flex-sm-row flex-column align-items-center">
-            
-                <div class="ml-3">
-                    <strong>ICP建设中</strong>
-                    <p class="mt-2">那就随机来一张图吧(„ಡωಡ„)</p>
-                    
-                    
-                    <p><a href="index.html" rel="nofollow" target="_blank" class='btn btn-primary btn-sm'>刷新图片</a></p>
-                </div>
-                <div class="ml-sm-0 ml-md-auto">
-                    <p id="counter" class="text-center"><span class="display-4">0</span><br>自动刷新图片</p>
-                </div>
-            </div>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="https://image.lolimi.cn/2024/08/19/66c3340285df5.png" alt="Avatar" class="avatar">
         </div>
-    </div>        
-    </div>               
-        <script src="./404static/bundle.pack.js"></script>   
-       
-                        
-       
-        <script src="./404static/custom.min.js"></script>
-        <script src="./404static/server.min.js%3Fv=1.2"></script>        
-        <script>
-            feather.replace({
-                'width': '1em',
-                'height': '1em'
-            })
-        </script>
-                            </body>
+        <h1>喃备 列表</h1>
+    </div>
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="搜索 API" onkeyup="filterApis()">
+    </div>
+    <ul class="api-list" id="apiList">
+        <li class="api-item">
+            <div class="api-name">喃娘Alist</div>
+            <a class="api-link" href="./bei/20240819001.html" target="_blank">
+                查看详情
+                <img src="http://a.ooii.us.kg/images/logo.png" alt="装饰图片" class="api-link-img">
+            </a>
+        </li>
+      
+      
+      
+        <!-- 其他API列表项 -->
+    </ul>
+    <button class="toggle-theme-btn" onclick="toggleTheme()">切换主题</button>
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        function filterApis() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const apiItems = document.querySelectorAll('.api-item');
+
+            apiItems.forEach(item => {
+                const apiName = item.querySelector('.api-name').textContent.toLowerCase();
+                if (apiName.includes(searchInput)) {
+                    item.style.display = '';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
 </html>

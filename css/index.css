@@ -1,0 +1,149 @@
+  body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .logo-container {
+            flex-shrink: 0;
+        }
+        .avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .search-container {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .search-input {
+            width: 100%;
+            max-width: 600px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            box-sizing: border-box;
+            transition: box-shadow 0.2s;
+        }
+        .search-input:focus {
+            box-shadow: 0 0 5px rgba(0, 102, 204, 0.5);
+        }
+        .api-list {
+            list-style: none;
+            padding: 0;
+        }
+        .api-item {
+            background: white;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s, transform 0.2s;
+        }
+        .api-item:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+        .api-name {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .api-link {
+            display: flex;
+            align-items: center;
+            color: #007BFF;
+            text-decoration: none;
+            transition: color 0.2s;
+            padding: 10px; /* 调整内边距 */
+        }
+        .api-link:hover {
+            color: #0056b3;
+        }
+        .api-link img {
+            width: 30px; /* 调整图片大小 */
+            height: 30px;
+            border-radius: 50%;
+            margin-left: auto; /* 使图片靠右 */
+        }
+        .dark-mode {
+            background-color: #333;
+            color: #f4f4f4;
+        }
+        .dark-mode .api-item {
+            background: #444;
+            border-color: #555;
+        }
+        .dark-mode .api-link {
+            color: #1e90ff;
+        }
+        .dark-mode .api-link:hover {
+            color: #63a4ff;
+        }
+        .toggle-theme-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .toggle-theme-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+            .logo-container {
+                margin-bottom: 20px;
+            }
+            .api-name {
+                font-size: 1.1em;
+            }
+            .api-link {
+                font-size: 14px;
+            }
+            .toggle-theme-btn {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2em;
+            }
+            .api-name {
+                font-size: 1em;
+            }
+            .api-link {
+                font-size: 12px;
+            }
+            .toggle-theme-btn {
+                padding: 6px 12px;
+            }
+        }
+    </style>

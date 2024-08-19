@@ -1,0 +1,85 @@
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-image: url('https://image.lolimi.cn/2024/08/19/66c2ebffbda05.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 20px;
+    background: transparent; /* 背景色改为透明 */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.info-item {
+    border: 2px solid #555;
+    padding: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: transparent; /* 背景色改为透明 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+}
+
+.info-item .lable {
+    font-weight: bold;
+    color: #95a5a6;
+}
+
+.info-item .value {
+    color: #ecf0f1;
+    margin-top: 5px;
+}
+
+.info-item a {
+    color: #16a085;
+    text-decoration: none;
+}
+
+.info-item a:hover {
+    color: #1abc9c;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px 0;
+    font-size: 0.9em;
+    background: transparent; /* 版权所有部分的背景色改为透明 */
+    color: #95a5a6;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+}
+
+footer a {
+    color: #95a5a6;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #1abc9c;
+}
